@@ -1,4 +1,4 @@
-package com.udacity.jwdnd.controller;
+package com.udacity.jwdnd.controller.home;
 
 import org.springframework.stereotype.Service;
 

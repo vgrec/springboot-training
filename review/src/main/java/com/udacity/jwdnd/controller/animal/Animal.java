@@ -1,4 +1,4 @@
-package com.udacity.jwdnd.controller;
+package com.udacity.jwdnd.controller.animal;
 
 public class Animal {
     private String animalName;

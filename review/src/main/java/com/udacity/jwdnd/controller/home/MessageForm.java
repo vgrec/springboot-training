@@ -1,4 +1,4 @@
-package com.udacity.jwdnd.controller;
+package com.udacity.jwdnd.controller.home;
 
 public class MessageForm {
     private String text;
