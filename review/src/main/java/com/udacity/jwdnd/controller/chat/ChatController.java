@@ -26,9 +26,9 @@ public class ChatController {
     @PostMapping
     public String postMessage(@ModelAttribute("chatForm") ChatForm chatForm, Model model) {
         String message = chatForm.getMessageText();
-//        if (chatForm.getMessageType().equals("shout")) {
-//            message = message.toUpperCase();
-//        }
+        if (chatForm.getMessageType().equals("shout")) {
+            message = message.toUpperCase();
+        }
         messageService.addMessage(
                 new ChatMessage(chatForm.getUsername(), message)
         );
