@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 @Controller
 public class HomeController {
+    private boolean firstVisit = true;
 
     @RequestMapping("/home")
     public String getHomePage(Model model) {
@@ -18,6 +19,13 @@ public class HomeController {
         model.addAttribute("cat", new Cat());
 
         return "home";
+    }
+
+    @RequestMapping("/simple-home")
+    public String getSimpleHome(Model model) {
+        model.addAttribute("firstVisit", firstVisit);
+        firstVisit = false;
+        return "simple-home";
     }
 
     private static class Cat {
