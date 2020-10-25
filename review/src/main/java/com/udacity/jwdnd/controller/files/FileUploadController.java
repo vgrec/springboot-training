@@ -37,8 +37,6 @@ public class FileUploadController {
 
     @GetMapping
     public String renderPage(Model model) {
-        model.addAttribute("status", "initial");
-        model.addAttribute("content", "");
         return "file-upload";
     }
 
