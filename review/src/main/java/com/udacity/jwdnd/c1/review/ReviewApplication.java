@@ -19,7 +19,7 @@ public class ReviewApplication {
     }
 
     @Bean
-    public int pringSize(UserService userService){
+    public int pringSize(UserService userService) {
         System.out.println(userService.getUser());
         return 2;
     }
