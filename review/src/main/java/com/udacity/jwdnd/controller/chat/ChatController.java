@@ -25,13 +25,7 @@ public class ChatController {
 
     @PostMapping
     public String postMessage(@ModelAttribute("chatForm") ChatForm chatForm, Model model) {
-        String message = chatForm.getMessageText();
-        if (chatForm.getMessageType().equals("shout")) {
-            message = message.toUpperCase();
-        }
-        messageService.addMessage(
-                new ChatMessage(chatForm.getUsername(), message)
-        );
+        messageService.addMessage(chatForm);
 
         model.addAttribute("messages", messageService.getMessages());
         return "chat";
@@ -39,7 +33,7 @@ public class ChatController {
 
     @ModelAttribute("allMessageTypes")
     public String[] allMessageTypes(){
-        return new String[]{"Say", "Shout", "Wisper"};
+        return new String[]{"Say", "Shout", "Whisper"};
     }
 
 }

@@ -15,7 +15,19 @@ public class ChatMessageService {
         messages = new ArrayList<>();
     }
 
-    public void addMessage(ChatMessage message) {
+    public void addMessage(ChatForm chatForm) {
+        ChatMessage message = new ChatMessage();
+        message.setUsername(chatForm.getUsername());
+        switch (chatForm.getMessageType()) {
+            case "Shout":
+                message.setMessageText(chatForm.getMessageText().toUpperCase());
+                break;
+            case "Whisper":
+                message.setMessageText(chatForm.getMessageText().toLowerCase());
+                break;
+            default:
+                message.setMessageText(chatForm.getMessageText());
+        }
         messages.add(message);
     }
 

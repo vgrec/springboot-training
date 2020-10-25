@@ -4,8 +4,11 @@ public class ChatMessage {
     private String username;
     private String messageText;
 
-    public ChatMessage(String username, String messageText) {
+    public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setMessageText(String messageText) {
         this.messageText = messageText;
     }
 
