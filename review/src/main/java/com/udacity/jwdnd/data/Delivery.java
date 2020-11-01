@@ -1,11 +1,9 @@
 package com.udacity.jwdnd.data;
 
-import java.sql.Timestamp;
-
 public class Delivery {
     private int id;
     private int orderId;
-    private Timestamp time;
+    private String deliveryTime;
 
     public int getId() {
         return id;
@@ -23,11 +21,11 @@ public class Delivery {
         this.orderId = orderId;
     }
 
-    public Timestamp getTime() {
-        return time;
+    public String getDeliveryTime() {
+        return deliveryTime;
     }
 
-    public void setTime(Timestamp time) {
-        this.time = time;
+    public void setDeliveryTime(String deliveryTime) {
+        this.deliveryTime = deliveryTime;
     }
 }
